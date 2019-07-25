@@ -219,7 +219,7 @@ class: center, middle
 ## Filtering
 ## Early termination
 ## Flattening (expansion / nested loop)
-## Stateful computation
+## Stateful computation (scan)
 
 ---
 
