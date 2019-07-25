@@ -1,0 +1,6 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="95" width="414" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">xf <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> itr <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> <tspan fill="#B00040">Channel</tspan>() <tspan fill="#008000" font-weight="bold">do</tspan> ch</text>
+<text x="0" xml:space="preserve" y="45">    foldl′(xf(put!), itr, init<tspan fill="#666666">=</tspan>ch)</text>
+<text x="0" xml:space="preserve" y="70"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="95"/></g></svg>

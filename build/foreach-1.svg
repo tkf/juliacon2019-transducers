@@ -1,0 +1,10 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="195" width="610" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">foreach′(f, xs) <tspan fill="#666666">=</tspan> foldl′(xs; init<tspan fill="#666666">=</tspan><tspan fill="#008000">nothing</tspan>) <tspan fill="#008000" font-weight="bold">do</tspan> _, x</text>
+<text x="0" xml:space="preserve" y="45">    f(x)</text>
+<text x="0" xml:space="preserve" y="70"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="95"/>
+<text x="0" xml:space="preserve" y="120">foreach′(xs) <tspan fill="#008000" font-weight="bold">do</tspan> x</text>
+<text x="0" xml:space="preserve" y="145">    println(<tspan fill="#BA2121">&quot;</tspan><tspan fill="#BA2121">G</tspan><tspan fill="#BA2121">o</tspan><tspan fill="#BA2121">t</tspan><tspan fill="#BA2121">:</tspan><tspan fill="#BA2121">&quot;</tspan>, x)</text>
+<text x="0" xml:space="preserve" y="170"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195"/></g></svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" y="20" xml:space="preserve">mapping(f)&#160;<tspan fill="#666666">=</tspan>&#160;step&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;(acc,&#160;x)&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;step(acc,&#160;f(x))</text>
+<text x="0" y="45" xml:space="preserve">filtering(pred)&#160;<tspan fill="#666666">=</tspan>&#160;step&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;(acc,&#160;x)&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;pred(x)&#160;<tspan fill="#666666">?</tspan>&#160;step(acc,&#160;x)&#160;<tspan fill="#666666">:</tspan>&#160;acc</text>
+<text x="0" y="70" xml:space="preserve"></text>
+<text x="0" y="95" xml:space="preserve">xf&#160;<tspan fill="#666666">=</tspan>&#160;filtering(<tspan fill="#666666">!</tspan>ismissing)&#160;∘&#160;mapping(x&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;x&#160;<tspan fill="#666666">-</tspan>&#160;<tspan fill="#666666">1</tspan>)&#160;∘&#160;filtering(x&#160;<tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan>&#160;x&#160;<tspan fill="#666666">&gt;</tspan>&#160;<tspan fill="#666666">0</tspan>)</text>
+<text x="0" y="120" xml:space="preserve">step&#160;<tspan fill="#666666">=</tspan>&#160;xf(<tspan fill="#666666">+</tspan>)</text>
+<text x="0" y="145" xml:space="preserve"></text>
+<text x="0" y="170" xml:space="preserve">xs&#160;<tspan fill="#666666">=</tspan>&#160;[missing,&#160;<tspan fill="#666666">2</tspan>,&#160;<tspan fill="#666666">0</tspan>,&#160;missing,&#160;<tspan fill="#666666">3</tspan>]</text>
+<text x="0" y="195" xml:space="preserve">foldl(xf(<tspan fill="#666666">+</tspan>),&#160;xs;&#160;init<tspan fill="#666666">=</tspan><tspan fill="#666666">0</tspan>)&#160;<tspan fill="#666666">==</tspan>&#160;<tspan fill="#666666">3</tspan></text>
+<text x="0" y="220" xml:space="preserve">foldl(xf(push!),&#160;xs;&#160;init<tspan fill="#666666">=</tspan>[])&#160;<tspan fill="#666666">==</tspan>&#160;[<tspan fill="#666666">1</tspan>,&#160;<tspan fill="#666666">2</tspan>]</text>
+<text x="0" y="245" xml:space="preserve"></text></g></svg>

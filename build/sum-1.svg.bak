@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" y="20" xml:space="preserve"><tspan fill="#008000" font-weight="bold">function</tspan>&#160;sum′(f,&#160;xs)</text>
+<text x="0" y="45" xml:space="preserve">&#160;&#160;&#160;&#160;sum&#160;<tspan fill="#666666">=</tspan>&#160;<tspan fill="#666666">0</tspan></text>
+<text x="0" y="70" xml:space="preserve">&#160;&#160;&#160;&#160;<tspan fill="#008000" font-weight="bold">for</tspan>&#160;x&#160;<tspan fill="#008000">in</tspan>&#160;xs</text>
+<text x="0" y="95" xml:space="preserve">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;sum&#160;<tspan fill="#666666">+=</tspan>&#160;f(x)</text>
+<text x="0" y="120" xml:space="preserve">&#160;&#160;&#160;&#160;<tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" y="145" xml:space="preserve">&#160;&#160;&#160;&#160;<tspan fill="#008000" font-weight="bold">return</tspan>&#160;sum</text>
+<text x="0" y="170" xml:space="preserve"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" y="195" xml:space="preserve"></text></g></svg>

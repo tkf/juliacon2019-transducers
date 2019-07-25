@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><!-- Created with Inkscape (http://www.inkscape.org/) --><svg height="520.00003" id="svg67" inkscape:version="0.92.4 5da689c313, 2019-01-14" sodipodi:docname="filter-annot.svg" version="1.1" viewBox="0 0 717.24833 520.00003" width="717.24833" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs61"/>
+  <sodipodi:namedview bordercolor="#666666" borderopacity="1.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" id="base" inkscape:current-layer="g384" inkscape:cx="1500.5251" inkscape:cy="1190.2383" inkscape:document-units="mm" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="1036" inkscape:window-maximized="0" inkscape:window-width="1246" inkscape:window-x="0" inkscape:window-y="20" inkscape:zoom="0.24748738" pagecolor="#ffffff" showgrid="false" units="px"/>
+  <metadata id="metadata64">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g id="layer3" inkscape:groupmode="layer" inkscape:label="annot-1" style="display:inline">
+    <rect height="75.904541" id="rect419" style="stroke-width:1.32291667;stroke:#000000;stroke-opacity:1;fill:none;stroke-miterlimit:4;stroke-dasharray:none" width="226.64455" x="82.319016" y="174.68779"/>
+    <rect height="75.904541" id="rect419-3" style="fill:none;stroke:#000000;stroke-width:1.32291667;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" width="271.54581" x="404.11151" y="174.15326"/>
+    <rect height="25.657896" id="rect419-3-6" style="fill:none;stroke:#000000;stroke-width:1.32291667;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" width="302.54907" x="409.45691" y="449.9754"/>
+  </g>
+  <g id="g384" inkscape:groupmode="layer" inkscape:label="code/filter-2" style="display:inline" transform="translate(0,100.07277)">
+    <svg height="520" width="402" x="315.24835" xmlns="http://www.w3.org/2000/svg" y="-100.07277">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">filter′(f, xs) <tspan fill="#666666">=</tspan> foldl′(</text>
+<text x="0" xml:space="preserve" y="45">    filtering_step(f, push!),</text>
+<text x="0" xml:space="preserve" y="70">    xs, init<tspan fill="#666666">=</tspan>[])</text>
+<text x="0" xml:space="preserve" y="95"/>
+<text x="0" xml:space="preserve" y="120"><tspan fill="#008000" font-weight="bold">function</tspan> filtering_step(f, step)</text>
+<text x="0" xml:space="preserve" y="145"/>
+<text x="0" xml:space="preserve" y="170">    <tspan fill="#008000" font-weight="bold">function</tspan> new_step(acc, x)</text>
+<text x="0" xml:space="preserve" y="195">        <tspan fill="#008000" font-weight="bold">if</tspan> f(x)</text>
+<text x="0" xml:space="preserve" y="220">            acc <tspan fill="#666666">=</tspan> step(acc, x)</text>
+<text x="0" xml:space="preserve" y="245">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="270">        <tspan fill="#008000" font-weight="bold">return</tspan> acc</text>
+<text x="0" xml:space="preserve" y="295">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="320"/>
+<text x="0" xml:space="preserve" y="345">    <tspan fill="#008000" font-weight="bold">return</tspan> new_step</text>
+<text x="0" xml:space="preserve" y="370"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="395"/>
+<text x="0" xml:space="preserve" y="420">filtering_step(f, step) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="445">    (acc, x) <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan></text>
+<text x="0" xml:space="preserve" y="470">        f(x) <tspan fill="#666666">?</tspan> step(acc, x) <tspan fill="#666666">:</tspan> acc</text>
+<text x="0" xml:space="preserve" y="495"><tspan fill="#408080" font-style="italic"># (equivalent)</tspan></text>
+<text x="0" xml:space="preserve" y="520"/></g></svg>
+  </g>
+  <g id="layer1" inkscape:groupmode="layer" inkscape:label="code/filter-1" style="display:inline" transform="translate(0,100.07277)">
+    <svg height="245" width="292" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20"><tspan fill="#008000" font-weight="bold">function</tspan> filter′(f, xs)</text>
+<text x="0" xml:space="preserve" y="45">    ys <tspan fill="#666666">=</tspan> []</text>
+<text x="0" xml:space="preserve" y="70">    <tspan fill="#008000" font-weight="bold">for</tspan> x <tspan fill="#008000">in</tspan> xs</text>
+<text x="0" xml:space="preserve" y="95">        <tspan fill="#008000" font-weight="bold">if</tspan> f(x)</text>
+<text x="0" xml:space="preserve" y="120">            push!(ys, x)</text>
+<text x="0" xml:space="preserve" y="145">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="170">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195">    <tspan fill="#008000" font-weight="bold">return</tspan> ys</text>
+<text x="0" xml:space="preserve" y="220"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="245"/></g></svg>
+  </g>
+  <g id="layer2" inkscape:groupmode="layer" inkscape:label="grid" sodipodi:insensitive="true" style="display:none">
+    <path d="M 8.3415456,95.444195 H 769.06206" id="path394" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" transform="translate(0,100.07277)"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="195" width="268" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">ans <tspan fill="#666666">=</tspan> <tspan fill="#008000" font-weight="bold">for</tspan> x <tspan fill="#008000">in</tspan> xs</text>
+<text x="0" xml:space="preserve" y="45">    A(x)</text>
+<text x="0" xml:space="preserve" y="70">    B(x) <tspan fill="#666666">&amp;&amp;</tspan> <tspan fill="#008000" font-weight="bold">break</tspan></text>
+<text x="0" xml:space="preserve" y="95">    C(x) <tspan fill="#666666">&amp;&amp;</tspan> <tspan fill="#008000" font-weight="bold">break</tspan> D(x)</text>
+<text x="0" xml:space="preserve" y="120"><tspan fill="#008000" font-weight="bold">else</tspan></text>
+<text x="0" xml:space="preserve" y="145">    E(x)</text>
+<text x="0" xml:space="preserve" y="170"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195"/></g></svg>

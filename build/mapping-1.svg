@@ -1,0 +1,15 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="320" width="585" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20"><tspan fill="#008000" font-weight="bold">function</tspan> mapping(f)</text>
+<text x="0" xml:space="preserve" y="45">    <tspan fill="#008000" font-weight="bold">function</tspan> transducer(step)</text>
+<text x="0" xml:space="preserve" y="70">        <tspan fill="#008000" font-weight="bold">function</tspan> new_step(acc, x)</text>
+<text x="0" xml:space="preserve" y="95">            <tspan fill="#008000" font-weight="bold">return</tspan> step(acc, f(x))</text>
+<text x="0" xml:space="preserve" y="120">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="145">        <tspan fill="#008000" font-weight="bold">return</tspan> new_step</text>
+<text x="0" xml:space="preserve" y="170">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195">    <tspan fill="#008000" font-weight="bold">return</tspan> transducer</text>
+<text x="0" xml:space="preserve" y="220"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="245"/>
+<text x="0" xml:space="preserve" y="270"><tspan fill="#408080" font-style="italic"># equivalently:</tspan></text>
+<text x="0" xml:space="preserve" y="295">mapping(f) <tspan fill="#666666">=</tspan> step <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> (acc, x) <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> step(acc, f(x))</text>
+<text x="0" xml:space="preserve" y="320"/></g></svg>

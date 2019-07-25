@@ -1,0 +1,6 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="95" width="378" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20"><tspan fill="#408080" font-style="italic"># → equivalently:</tspan></text>
+<text x="0" xml:space="preserve" y="45">mapping_step(f, step) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="70">    (acc, x) <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> step(acc, f(x))</text>
+<text x="0" xml:space="preserve" y="95"/></g></svg>

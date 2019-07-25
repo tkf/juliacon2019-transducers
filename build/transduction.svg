@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="1295" width="1024" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20"><tspan fill="#008000" font-weight="bold">using</tspan> Transducers</text>
+<text x="0" xml:space="preserve" y="45"><tspan fill="#008000" font-weight="bold">using</tspan> Transducers<tspan fill="#666666">:</tspan> R_, wrap, Unseen, xform, inner, wrapping, wrap, unwrap</text>
+<text x="0" xml:space="preserve" y="70"><tspan fill="#008000" font-weight="bold">import</tspan> Transducers<tspan fill="#666666">:</tspan> start, next, complete</text>
+<text x="0" xml:space="preserve" y="95"/>
+<text x="0" xml:space="preserve" y="120"><tspan fill="#008000" font-weight="bold">struct</tspan> TransductionBuffer</text>
+<text x="0" xml:space="preserve" y="145">    buffer<tspan fill="#666666">::</tspan><tspan fill="#B00040">Vector</tspan>{<tspan fill="#B00040">Any</tspan>}</text>
+<text x="0" xml:space="preserve" y="170"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195"/>
+<text x="0" xml:space="preserve" y="220">Base<tspan fill="#666666">.</tspan>iterate(itr<tspan fill="#666666">::</tspan>TransductionBuffer, <tspan fill="#666666">::</tspan><tspan fill="#B00040">Any</tspan> <tspan fill="#666666">=</tspan> <tspan fill="#008000">nothing</tspan>) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="245">    <tspan fill="#008000" font-weight="bold">if</tspan> isempty(itr<tspan fill="#666666">.</tspan>buffer)</text>
+<text x="0" xml:space="preserve" y="270">        <tspan fill="#008000">nothing</tspan></text>
+<text x="0" xml:space="preserve" y="295">    <tspan fill="#008000" font-weight="bold">else</tspan></text>
+<text x="0" xml:space="preserve" y="320">        popfirst!(itr<tspan fill="#666666">.</tspan>buffer), <tspan fill="#008000">nothing</tspan></text>
+<text x="0" xml:space="preserve" y="345">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="370"/>
+<text x="0" xml:space="preserve" y="395"><tspan fill="#008000" font-weight="bold">struct</tspan> Transduction{T} <tspan fill="#666666">&lt;:</tspan> Transducer</text>
+<text x="0" xml:space="preserve" y="420">    ixf<tspan fill="#666666">::</tspan>T</text>
+<text x="0" xml:space="preserve" y="445"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="470"/>
+<text x="0" xml:space="preserve" y="495"><tspan fill="#008000" font-weight="bold">function</tspan> start(rf<tspan fill="#666666">::</tspan>R_{Transduction}, result)</text>
+<text x="0" xml:space="preserve" y="520">    buffer <tspan fill="#666666">=</tspan> []</text>
+<text x="0" xml:space="preserve" y="545">    itr <tspan fill="#666666">=</tspan> xform(rf)<tspan fill="#666666">.</tspan>ixf(TransductionBuffer(buffer))</text>
+<text x="0" xml:space="preserve" y="570">    <tspan fill="#008000" font-weight="bold">return</tspan> wrap(rf, (itr, Unseen(), buffer), start(inner(rf), result))</text>
+<text x="0" xml:space="preserve" y="595"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="620"/>
+<text x="0" xml:space="preserve" y="645">next(rf<tspan fill="#666666">::</tspan>R_{Transduction}, result, input) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="670">    wrapping(rf, result) <tspan fill="#008000" font-weight="bold">do</tspan> (itr, itstate0, buffer), result</text>
+<text x="0" xml:space="preserve" y="695">        push!(buffer, input)</text>
+<text x="0" xml:space="preserve" y="720">        <tspan fill="#008000" font-weight="bold">if</tspan> itstate0 <tspan fill="#008000">isa</tspan> Unseen</text>
+<text x="0" xml:space="preserve" y="745">            ret <tspan fill="#666666">=</tspan> iterate(itr)</text>
+<text x="0" xml:space="preserve" y="770">        <tspan fill="#008000" font-weight="bold">else</tspan></text>
+<text x="0" xml:space="preserve" y="795">            ret <tspan fill="#666666">=</tspan> iterate(itr, itstate0)</text>
+<text x="0" xml:space="preserve" y="820">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="845">        <tspan fill="#008000" font-weight="bold">while</tspan> <tspan fill="#008000" font-weight="bold">true</tspan></text>
+<text x="0" xml:space="preserve" y="870">            <tspan fill="#008000" font-weight="bold">if</tspan> ret <tspan fill="#666666">===</tspan> <tspan fill="#008000">nothing</tspan></text>
+<text x="0" xml:space="preserve" y="895">                <tspan fill="#008000" font-weight="bold">return</tspan> (itr, itstate0, buffer), reduced(complete(inner(rf), result))</text>
+<text x="0" xml:space="preserve" y="920">            <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="945">            itout, itstate <tspan fill="#666666">=</tspan> ret</text>
+<text x="0" xml:space="preserve" y="970">            result <tspan fill="#666666">=</tspan> next(inner(rf), result, itout)</text>
+<text x="0" xml:space="preserve" y="995">            <tspan fill="#008000" font-weight="bold">if</tspan> result <tspan fill="#008000">isa</tspan> Reduced <tspan fill="#666666">||</tspan> isempty(buffer)</text>
+<text x="0" xml:space="preserve" y="1020">                <tspan fill="#008000" font-weight="bold">return</tspan> (itr, itstate, buffer), result</text>
+<text x="0" xml:space="preserve" y="1045">            <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="1070">            ret <tspan fill="#666666">=</tspan> iterate(itr, itstate)</text>
+<text x="0" xml:space="preserve" y="1095">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="1120">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="1145"/>
+<text x="0" xml:space="preserve" y="1170">complete(rf<tspan fill="#666666">::</tspan>R_{Transduction}, result) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="1195">    complete(inner(rf), unwrap(rf, result)[<tspan fill="#666666">2</tspan>])</text>
+<text x="0" xml:space="preserve" y="1220"/>
+<text x="0" xml:space="preserve" y="1245"><tspan fill="#AA22FF">@show</tspan> collect(Transduction(itr <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> Base<tspan fill="#666666">.</tspan>Generator(x <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> x <tspan fill="#666666">+</tspan> <tspan fill="#666666">1</tspan>, itr)), <tspan fill="#666666">1</tspan><tspan fill="#666666">:</tspan><tspan fill="#666666">2</tspan>)</text>
+<text x="0" xml:space="preserve" y="1270"><tspan fill="#AA22FF">@show</tspan> collect(Transduction(itr <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> Iterators<tspan fill="#666666">.</tspan>filter(isodd, itr)), <tspan fill="#666666">1</tspan><tspan fill="#666666">:</tspan><tspan fill="#666666">2</tspan>)</text>
+<text x="0" xml:space="preserve" y="1295"/></g></svg>

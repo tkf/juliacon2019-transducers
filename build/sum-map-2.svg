@@ -1,0 +1,5 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="70" width="695" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">sum′(f, xs) <tspan fill="#666666">=</tspan> foldl′(mapping_step(f, <tspan fill="#666666">+</tspan>), xs; init<tspan fill="#666666">=</tspan><tspan fill="#666666">0</tspan>)</text>
+<text x="0" xml:space="preserve" y="45">map′(f, xs) <tspan fill="#666666">=</tspan> foldl′(mapping_step(f, push!), xs; init<tspan fill="#666666">=</tspan>[])</text>
+<text x="0" xml:space="preserve" y="70"/></g></svg>

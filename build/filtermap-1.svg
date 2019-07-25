@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="395" width="573" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">make_step(step) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="45">    filtering_step(</text>
+<text x="0" xml:space="preserve" y="70">        <tspan fill="#666666">!</tspan>ismissing,</text>
+<text x="0" xml:space="preserve" y="95">        mapping_step(</text>
+<text x="0" xml:space="preserve" y="120">            x <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> x <tspan fill="#666666">-</tspan> <tspan fill="#666666">1</tspan>,</text>
+<text x="0" xml:space="preserve" y="145">            filtering_step(</text>
+<text x="0" xml:space="preserve" y="170">                x <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> x <tspan fill="#666666">&gt;</tspan> <tspan fill="#666666">0</tspan>,</text>
+<text x="0" xml:space="preserve" y="195">                step,</text>
+<text x="0" xml:space="preserve" y="220">            ),</text>
+<text x="0" xml:space="preserve" y="245">        ),</text>
+<text x="0" xml:space="preserve" y="270">    )</text>
+<text x="0" xml:space="preserve" y="295"/>
+<text x="0" xml:space="preserve" y="320">xs <tspan fill="#666666">=</tspan> [missing, <tspan fill="#666666">2</tspan>, <tspan fill="#666666">0</tspan>, missing, <tspan fill="#666666">3</tspan>]</text>
+<text x="0" xml:space="preserve" y="345">foldl′(make_step(<tspan fill="#666666">+</tspan>), xs; init<tspan fill="#666666">=</tspan><tspan fill="#666666">0</tspan>) <tspan fill="#666666">==</tspan> <tspan fill="#666666">3</tspan></text>
+<text x="0" xml:space="preserve" y="370">foldl′(make_step(push!), xs; init<tspan fill="#666666">=</tspan>[]) <tspan fill="#666666">==</tspan> [<tspan fill="#666666">1</tspan>, <tspan fill="#666666">2</tspan>]</text>
+<text x="0" xml:space="preserve" y="395"/></g></svg>

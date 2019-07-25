@@ -1,0 +1,15 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="320" width="695" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">sum′(f, xs) <tspan fill="#666666">=</tspan> foldl′(mapping_step(f, <tspan fill="#666666">+</tspan>), xs; init<tspan fill="#666666">=</tspan><tspan fill="#666666">0</tspan>)</text>
+<text x="0" xml:space="preserve" y="45">map′(f, xs) <tspan fill="#666666">=</tspan> foldl′(mapping_step(f, push!), xs; init<tspan fill="#666666">=</tspan>[])</text>
+<text x="0" xml:space="preserve" y="70"/>
+<text x="0" xml:space="preserve" y="95">mapping_step(f, step) <tspan fill="#666666">=</tspan> (acc, x) <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> step(acc, f(x))</text>
+<text x="0" xml:space="preserve" y="120"/>
+<text x="0" xml:space="preserve" y="145"><tspan fill="#008000" font-weight="bold">function</tspan> foldl′(step, xs; init)</text>
+<text x="0" xml:space="preserve" y="170">    acc <tspan fill="#666666">=</tspan> init</text>
+<text x="0" xml:space="preserve" y="195">    <tspan fill="#008000" font-weight="bold">for</tspan> x <tspan fill="#008000">in</tspan> xs</text>
+<text x="0" xml:space="preserve" y="220">        acc <tspan fill="#666666">=</tspan> step(acc, x)</text>
+<text x="0" xml:space="preserve" y="245">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="270">    <tspan fill="#008000" font-weight="bold">return</tspan> acc</text>
+<text x="0" xml:space="preserve" y="295"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="320"/></g></svg>

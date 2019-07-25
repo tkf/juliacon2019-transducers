@@ -1,0 +1,23 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="520" width="402" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">filter′(f, xs) <tspan fill="#666666">=</tspan> foldl′(</text>
+<text x="0" xml:space="preserve" y="45">    filtering_step(f, push!),</text>
+<text x="0" xml:space="preserve" y="70">    xs, init<tspan fill="#666666">=</tspan>[])</text>
+<text x="0" xml:space="preserve" y="95"/>
+<text x="0" xml:space="preserve" y="120"><tspan fill="#008000" font-weight="bold">function</tspan> filtering_step(f, step)</text>
+<text x="0" xml:space="preserve" y="145"/>
+<text x="0" xml:space="preserve" y="170">    <tspan fill="#008000" font-weight="bold">function</tspan> new_step(acc, x)</text>
+<text x="0" xml:space="preserve" y="195">        <tspan fill="#008000" font-weight="bold">if</tspan> f(x)</text>
+<text x="0" xml:space="preserve" y="220">            acc <tspan fill="#666666">=</tspan> step(acc, x)</text>
+<text x="0" xml:space="preserve" y="245">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="270">        <tspan fill="#008000" font-weight="bold">return</tspan> acc</text>
+<text x="0" xml:space="preserve" y="295">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="320"/>
+<text x="0" xml:space="preserve" y="345">    <tspan fill="#008000" font-weight="bold">return</tspan> new_step</text>
+<text x="0" xml:space="preserve" y="370"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="395"/>
+<text x="0" xml:space="preserve" y="420">filtering_step(f, step) <tspan fill="#666666">=</tspan></text>
+<text x="0" xml:space="preserve" y="445">    (acc, x) <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan></text>
+<text x="0" xml:space="preserve" y="470">        f(x) <tspan fill="#666666">?</tspan> step(acc, x) <tspan fill="#666666">:</tspan> acc</text>
+<text x="0" xml:space="preserve" y="495"><tspan fill="#408080" font-style="italic"># (equivalent)</tspan></text>
+<text x="0" xml:space="preserve" y="520"/></g></svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="320" width="475" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20">ans <tspan fill="#666666">=</tspan> foreach′(xs) <tspan fill="#008000" font-weight="bold">do</tspan> x</text>
+<text x="0" xml:space="preserve" y="45">    A(x)</text>
+<text x="0" xml:space="preserve" y="70">    B(x) <tspan fill="#666666">&amp;&amp;</tspan> <tspan fill="#008000" font-weight="bold">return</tspan> Reduced(<tspan fill="#008000">nothing</tspan>)</text>
+<text x="0" xml:space="preserve" y="95">    C(x) <tspan fill="#666666">&amp;&amp;</tspan> <tspan fill="#008000" font-weight="bold">return</tspan> Reduced(D(x))</text>
+<text x="0" xml:space="preserve" y="120">    x</text>
+<text x="0" xml:space="preserve" y="145"><tspan fill="#008000" font-weight="bold">end</tspan> <tspan fill="#666666">|&gt;</tspan> ifunreduced() <tspan fill="#008000" font-weight="bold">do</tspan> x</text>
+<text x="0" xml:space="preserve" y="170">    E(x)</text>
+<text x="0" xml:space="preserve" y="195"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="220"/>
+<text x="0" xml:space="preserve" y="245">ifunreduced(f, x<tspan fill="#666666">::</tspan>Reduced) <tspan fill="#666666">=</tspan> x<tspan fill="#666666">.</tspan>value</text>
+<text x="0" xml:space="preserve" y="270">ifunreduced(f, x) <tspan fill="#666666">=</tspan> f(x)</text>
+<text x="0" xml:space="preserve" y="295">ifunreduced(f) <tspan fill="#666666">=</tspan> x <tspan fill="#666666">-</tspan><tspan fill="#666666">&gt;</tspan> ifunreduced(f, x)</text>
+<text x="0" xml:space="preserve" y="320"/></g></svg>

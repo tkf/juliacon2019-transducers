@@ -1,0 +1,18 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg height="395" width="378" xmlns="http://www.w3.org/2000/svg">
+<g font-family="monospace" font-size="20px">
+<text x="0" xml:space="preserve" y="20"><tspan fill="#008000" font-weight="bold">function</tspan> filter′(pred, xs)</text>
+<text x="0" xml:space="preserve" y="45">    acc <tspan fill="#666666">=</tspan> []</text>
+<text x="0" xml:space="preserve" y="70"/>
+<text x="0" xml:space="preserve" y="95">    <tspan fill="#008000" font-weight="bold">function</tspan> step(acc, x)</text>
+<text x="0" xml:space="preserve" y="120">        <tspan fill="#008000" font-weight="bold">if</tspan> pred(x)</text>
+<text x="0" xml:space="preserve" y="145">            acc <tspan fill="#666666">=</tspan> push!(acc, x)</text>
+<text x="0" xml:space="preserve" y="170">        <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="195">        <tspan fill="#008000" font-weight="bold">return</tspan> acc</text>
+<text x="0" xml:space="preserve" y="220">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="245"/>
+<text x="0" xml:space="preserve" y="270">    <tspan fill="#008000" font-weight="bold">for</tspan> x <tspan fill="#008000">in</tspan> xs</text>
+<text x="0" xml:space="preserve" y="295">        acc <tspan fill="#666666">=</tspan> step(acc, x)</text>
+<text x="0" xml:space="preserve" y="320">    <tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="345">    <tspan fill="#008000" font-weight="bold">return</tspan> acc</text>
+<text x="0" xml:space="preserve" y="370"><tspan fill="#008000" font-weight="bold">end</tspan></text>
+<text x="0" xml:space="preserve" y="395"/></g></svg>
