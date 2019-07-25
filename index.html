@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transducers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Literata&display=swap');
+
+      .remark-slide-content {
+	font-size: 25px;
+	padding: 30px 30px 30px 30px;
+      }
+      .remark-slide-content h1 {
+	font-size: 40px;
+      }
+      .remark-slide-content h2 {
+	font-size: 35px;
+      }
+      .remark-slide-content h3 {
+	font-size: 30px;
+      }
+      body { font-family: 'Lato', sans-serif; }
+      h1, h2, h3 {
+        font-family: 'Literata', serif;
+        font-weight: normal;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Fira Mono', monospace; }
+      a, a:link, a:visited {
+        color: #25749b;
+      }
+
+      .mytable th, .mytable td {
+	padding: 10px 30px 10px 30px;
+      }
+      .implementee-row th, .implementee-row td {
+	padding-top: 60px;
+      }
+      .implementer-row {
+	color: #b00342;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script src="https://remarkjs.com/downloads/remark-0.14.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        sourceUrl: 'slide.md',
+	highlightLines: true,
+	highlightSpans: true,
+      });
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
